@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+
+button {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.clicked {
+    background-color: #881ef1;
+    color: white;
+}
