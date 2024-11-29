@@ -1,6 +1,7 @@
 'use strict';
 
 const wrapper = document.querySelector('.wrapper');
+let counter = 0;
 
 for (let i = 0; i < 5; i++) {
   const button = document.createElement('button');
@@ -8,14 +9,16 @@ for (let i = 0; i < 5; i++) {
   wrapper.append(button)
 }
 
-const buttons = document.querySelectorAll('button');
-let counter = 0;
-buttons.forEach((button, index) => {
-  button.addEventListener('click', () => {
+wrapper.addEventListener('click', (event) => {
+  const button = event.target;
+
+  if (button.tagName === 'BUTTON') {
+    const buttons = document.querySelectorAll('button');
     buttons.forEach((button) => {
       button.innerHTML = 'Нажми меня';
       button.classList.remove('clicked');
     });
+
     button.innerHTML = 'Нажата!';
     button.classList.add('clicked');
 
@@ -26,8 +29,9 @@ buttons.forEach((button, index) => {
       document.body.append(el);
     }
     el.innerHTML = `Всего нажатий: ${++counter}`;
-  })
-})
+  }
+});
+
 
 
 
