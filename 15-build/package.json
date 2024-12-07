@@ -1,0 +1,17 @@
+{
+  "name": "user-task",
+  "version": "1.0.0",
+  "description": "user-task bundle",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup index.js --file bundle.js --format cjs",
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kristina",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "rollup": "^4.27.4"
+  }
+}
